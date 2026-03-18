@@ -55,7 +55,7 @@
         const REDIRECT_URI = 'https://laozhangyanbo.github.io/strong-willed/';  // ← 这里填你的
 
         function login() {
-            const authUrl = `https://second.me/oauth/authorize?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=code&scope=user:read`;
+            const authUrl = `https://second.me/oauth/authorize?client_id=${CLIENT_ID}&redirect_uri=${encodeURIComponent(REDIRECT_URI)}&response_type=code&scope=user:read`;
             window.location.href = authUrl;
         }
 
