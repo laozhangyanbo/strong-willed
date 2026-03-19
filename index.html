@@ -52,12 +52,9 @@
 
     <script>
         const CLIENT_ID = '5ff67597-6db5-46f0-9954-8cfbf38705b5';  // ← 这里填你的
-        const REDIRECT_URI = 'https://laozhangyanbo.github.io/strong-willed/';  // ← 这里填你的
-
-        function login() {
-            const authUrl = `https://second.me/oauth/authorize?client_id=${CLIENT_ID}&redirect_uri=${encodeURIComponent(REDIRECT_URI)}&response_type=code&scope=user:read`;
-            window.location.href = authUrl;
-        }
+        const REDIRECT_URI = 'strong-willed.vecel.app/api/callback';  // ← 这里填你的
+        const authUrl="https://secondme.com/oauth/authorize"+"?response type=code"+`&client_id=${CLIENT_ID}`+`&redict_uri=${encodeURIComponent(REDIRECT_URI)}`;
+        windows.location.href=authUrl;
 
         // 处理回调
         window.onload = function() {
